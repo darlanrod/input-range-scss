@@ -1,2 +1,5 @@
+# Sass
 .sass-cache
-*.css.map
+
+# macOS
+.DS_Store
