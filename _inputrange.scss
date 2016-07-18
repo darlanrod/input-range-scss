@@ -4,28 +4,28 @@
 // Version 1.0.1
 // MIT License
 
-$track-color: #424242;
-$thumb-color: #555bc8;
+$track-color: #424242 !default;
+$thumb-color: #555bc8 !default;
 
-$thumb-radius: 8px;
-$thumb-height: 30px;
-$thumb-width: 30px;
-$thumb-shadow-size: 1px;
-$thumb-shadow-blur: 1px;
-$thumb-shadow-color: #111;
-$thumb-border-width: 1px;
-$thumb-border-color: #fff;
+$thumb-radius: 8px !default;
+$thumb-height: 30px !default;
+$thumb-width: 30px !default;
+$thumb-shadow-size: 1px !default;
+$thumb-shadow-blur: 1px !default;
+$thumb-shadow-color: #111 !default;
+$thumb-border-width: 1px !default;
+$thumb-border-color: #fff !default;
 
-$track-width: 100%;
-$track-height: 10px;
-$track-shadow-size: 2px;
-$track-shadow-blur: 2px;
-$track-shadow-color: #222;
-$track-border-width: 1px;
-$track-border-color: #000;
+$track-width: 100% !default;
+$track-height: 10px !default;
+$track-shadow-size: 2px !default;
+$track-shadow-blur: 2px !default;
+$track-shadow-color: #222 !default;
+$track-border-width: 1px !default;
+$track-border-color: #000 !default;
 
-$track-radius: 5px;
-$contrast: 5%;
+$track-radius: 5px !default;
+$contrast: 5% !default;
 
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
   box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
