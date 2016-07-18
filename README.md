@@ -4,4 +4,5 @@ A Sass version of the article [Styling Cross-Browser Compatible Range Inputs wit
 
 ## Changelog
 
+- 1.1.1: Make all variables as "!default". (thanks, [n0nick](https://github.com/n0nick))
 - 1.0.1: SCSS-Lint fix. (thanks, [CookPete](https://github.com/CookPete))
