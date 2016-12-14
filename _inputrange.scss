@@ -91,7 +91,7 @@ $contrast: 5% !default;
     @include track();
     background: transparent;
     border-color: transparent;
-    border-width: $thumb-width 0;
+    border-width: ($thumb-height / 2) 0;
     color: transparent;
   }
 
