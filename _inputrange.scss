@@ -111,6 +111,7 @@ $contrast: 5% !default;
 
   &::-ms-thumb {
     @include thumb();
+    margin-top: 0; // Edge position fix
   }
 
   &:focus::-ms-fill-lower {
