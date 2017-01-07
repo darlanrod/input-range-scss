@@ -1,8 +1,9 @@
 // Styling Cross-Browser Compatible Range Inputs with Sass
 // Github: https://github.com/darlanrod/input-range-sass
 // Author: Darlan Rod https://github.com/darlanrod
-// Version 1.1.0
+// Version 1.2.0
 // MIT License
+
 $track-color: #424242 !default;
 $thumb-color: #555bc8 !default;
 
@@ -47,7 +48,7 @@ $contrast: 5% !default;
   width: $thumb-width;
 }
 
-[type="range"] {
+[type='range'] {
   -webkit-appearance: none;
   margin: $thumb-height / 2 0;
   width: $track-width;
