@@ -11,7 +11,7 @@ Sass component for customizing the input range using the native properties of ea
 
 ## Example
 
-![Input range native and custom on browsers](https://github.com/darlanrod/input-range-scss/example/input-range-browsers.jpg)
+![Input range native and custom on browsers](https://github.com/darlanrod/input-range-scss/blob/master/example/input-range-browsers.jpg)
 
 ## Changelog
 
