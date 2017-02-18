@@ -19,6 +19,8 @@ npm install --save input-range-scss
 
 ## Changelog
 
+-   1.4.1: Fixing example page
+-   1.4.0: NPM Package
 -   1.3.0: Better default style and example page
 -   1.2.0: Improvement in SCSS lint (thanks, [Dustin McCaffree](https://github.com/dMcCaffree))
 -   1.1.1: Fix track height in IE and thumb margin in Edge (thanks, [danclaydonpm](https://github.com/danclaydonpm) and [jenstornell](https://github.com/jenstornell))
