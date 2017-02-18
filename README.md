@@ -2,6 +2,10 @@
 
 Sass component for customizing the input range using the native properties of each browser. Based on article [Styling Cross-Browser Compatible Range Inputs with CSS](https://css-tricks.com/styling-cross-browser-compatible-range-inputs-css/) form CSS Tricks blog.
 
+## NPM Package
+```
+npm install --save input-range-scss
+```
 ## Features
 
 -   Variables for easy customization
