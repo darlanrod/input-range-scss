@@ -15,7 +15,7 @@ npm install --save input-range-scss
 
 ## Example
 
-![Input range native and custom on browsers](https://github.com/darlanrod/input-range-scss/blob/master/example/input-range-browsers.jpg)
+![Input range native and custom on browsers](https://github.com/darlanrod/input-range-scss/raw/master/example/input-range-browsers.jpg)
 
 ## Changelog
 
