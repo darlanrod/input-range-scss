@@ -48,6 +48,10 @@ $contrast: 5% !default;
   width: $thumb-width;
 }
 
+@mixin disabled {
+  cursor: not-allowed;
+}
+
 [type='range'] {
   -webkit-appearance: none;
   margin: $thumb-height / 2 0;
@@ -120,5 +124,27 @@ $contrast: 5% !default;
   &::-ms-thumb {
     @include thumb;
     margin-top: 0;
+  }
+
+  &:disabled {
+    &::-webkit-slider-thumb {
+      @include disabled;
+    }
+    &::-moz-range-thumb {
+      @include disabled;
+    }
+    &::-ms-thumb {
+      @include disabled;
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include disabled;
+    }
+    &::-ms-fill-lower {
+      @include disabled;
+    }
+    &::-ms-fill-upper {
+      @include disabled;
+    }
   }
 }
