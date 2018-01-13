@@ -52,6 +52,7 @@ $contrast: 5% !default;
   -webkit-appearance: none;
   margin: $thumb-height / 2 0;
   width: $track-width;
+  background: transparent;
 
   &:focus {
     outline: 0;
