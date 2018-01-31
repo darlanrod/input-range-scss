@@ -27,6 +27,8 @@ $track-border-color: #cfd8dc !default;
 $track-radius: 5px !default;
 $contrast: 5% !default;
 
+$ie-bottom-track-color: darken($track-color, $contrast) !default;
+
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
   box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
 }
@@ -105,7 +107,7 @@ $contrast: 5% !default;
 
   &::-ms-fill-lower {
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: darken($track-color, $contrast);
+    background: $ie-bottom-track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius * 2;
   }
