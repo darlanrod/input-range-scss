@@ -53,6 +53,10 @@ $contrast: 5% !default;
   margin: $thumb-height / 2 0;
   width: $track-width;
 
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
   &:focus {
     outline: 0;
 
