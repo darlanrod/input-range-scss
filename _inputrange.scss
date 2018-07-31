@@ -1,7 +1,7 @@
 // Styling Cross-Browser Compatible Range Inputs with Sass
 // Github: https://github.com/darlanrod/input-range-sass
 // Author: Darlan Rod https://github.com/darlanrod
-// Version 1.4.1
+// Version 1.4.2
 // MIT License
 
 $track-color: #eceff1 !default;
@@ -27,6 +27,8 @@ $track-border-color: #cfd8dc !default;
 $track-radius: 5px !default;
 $contrast: 5% !default;
 
+$ie-bottom-track-color: darken($track-color, $contrast) !default;
+
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
   box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
 }
@@ -38,14 +40,14 @@ $contrast: 5% !default;
   width: $track-width;
 }
 
-@mixin thumb {
+@mixin thumb($adjustment: 0) {
   @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
+  width: $thumb-width + $adjustment;
+  height: $thumb-height + $adjustment;
   background: $thumb-color;
   border: $thumb-border-width solid $thumb-border-color;
   border-radius: $thumb-radius;
   cursor: pointer;
-  height: $thumb-height;
-  width: $thumb-width;
 }
 
 @mixin disabled {
@@ -85,11 +87,12 @@ $contrast: 5% !default;
   &::-webkit-slider-thumb {
     @include thumb;
     -webkit-appearance: none;
-    margin-top: ((-$track-border-width * 2 + $track-height) / 2) - ($thumb-height / 2);
+    margin-top: ((-$track-border-width * 2 + $track-height) / 2 - $thumb-height / 2);
   }
 
   &::-moz-range-track {
     @include track;
+    height: $track-height / 2;
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
     background: $track-color;
     border: $track-border-width solid $track-border-color;
@@ -97,7 +100,7 @@ $contrast: 5% !default;
   }
 
   &::-moz-range-thumb {
-    @include thumb;
+    @include thumb(-4);
   }
 
   &::-ms-track {
@@ -110,21 +113,21 @@ $contrast: 5% !default;
 
   &::-ms-fill-lower {
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: darken($track-color, $contrast);
+    background: $ie-bottom-track-color;
     border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius * 2;
+    border-radius: ($track-radius * 2);
   }
 
   &::-ms-fill-upper {
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
     background: $track-color;
     border: $track-border-width solid $track-border-color;
-    border-radius: $track-radius * 2;
+    border-radius: ($track-radius * 2);
   }
 
   &::-ms-thumb {
-    @include thumb;
-    margin-top: 0;
+    @include thumb(-4);
+    margin-top: $track-height / 4;
   }
 
   &:disabled {
