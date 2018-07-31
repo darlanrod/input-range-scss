@@ -1,7 +1,7 @@
 // Styling Cross-Browser Compatible Range Inputs with Sass
 // Github: https://github.com/darlanrod/input-range-sass
 // Author: Darlan Rod https://github.com/darlanrod
-// Version 1.5.0
+// Version 1.5.1
 // MIT License
 
 $track-color: #eceff1 !default;
@@ -34,7 +34,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 }
 
 @mixin track {
-  cursor: pointer;
+  cursor: default;
   height: $track-height;
   transition: all .2s ease;
   width: $track-width;
@@ -45,7 +45,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   background: $thumb-color;
   border: $thumb-border-width solid $thumb-border-color;
   border-radius: $thumb-radius;
-  cursor: pointer;
+  cursor: default;
   height: $thumb-height + $adjustment;
   width: $thumb-width + $adjustment;
 }

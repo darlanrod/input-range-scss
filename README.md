@@ -19,10 +19,13 @@ npm install --save input-range-scss
 
 ## Changelog
 
+#### 1.5.1
+-   Correction of input cursor to default (thanks, [pichfl](https://github.com/pichfl))
+
 #### 1.5.0
--   Added :disabled state (thanks [mpavel](https://github.com/mpavel))
--   Improved normalization across browsers (thanks [guidezpl](https://github.com/guidezpl) and [GufNZ](https://github.com/GufNZ))
--   Removed Firefox border outline on focus (thanks [DeanPoulin](https://github.com/DeanPoulin))
+-   Added :disabled state (thanks, [mpavel](https://github.com/mpavel))
+-   Improved normalization across browsers (thanks, [guidezpl](https://github.com/guidezpl) and [GufNZ](https://github.com/GufNZ))
+-   Removed Firefox border outline on focus (thanks, [DeanPoulin](https://github.com/DeanPoulin))
 
 #### 1.4.1
 -   Fixing example page
