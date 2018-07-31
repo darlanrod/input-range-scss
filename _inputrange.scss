@@ -60,6 +60,10 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   width: $track-width;
   background: transparent;
 
+  &::-moz-focus-outer {
+    border: 0;
+  }
+
   &:focus {
     outline: 0;
 
