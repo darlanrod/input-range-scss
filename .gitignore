@@ -1,5 +1,6 @@
 
 # Created by https://www.gitignore.io/api/sass,macos,windows
+# Edit at https://www.gitignore.io/?templates=sass,macos,windows
 
 ### macOS ###
 # General
@@ -38,6 +39,7 @@ Temporary Items
 ### Windows ###
 # Windows thumbnail cache files
 Thumbs.db
+Thumbs.db:encryptable
 ehthumbs.db
 ehthumbs_vista.db
 
@@ -59,6 +61,5 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
 
 # End of https://www.gitignore.io/api/sass,macos,windows
