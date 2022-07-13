@@ -2,7 +2,7 @@
 _Styling Cross-Browser Compatible Range Inputs with Sass / SCSS_
 
 ## 1.5.3
--   Use of Sass's `math.div` on SCSS file. (thanks [Mitch J.](https://github.com/toBeOfUse))
+-   Use of Sass' `math.div` on SCSS file. (thanks [Mitch J.](https://github.com/toBeOfUse))
 
 ## 1.5.2
 -   Range track and thumb tweaks for Mozilla Firefox. (thanks [Adam Jagosz](https://github.com/hyvyys))
