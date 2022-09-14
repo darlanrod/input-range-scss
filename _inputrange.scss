@@ -44,7 +44,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
 @mixin thumb {
   @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
-  background: $thumb-color;
+  background-color: $thumb-color;
   border: $thumb-border-width solid $thumb-border-color;
   border-radius: $thumb-radius;
   box-sizing: border-box;
@@ -55,7 +55,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
 [type='range'] {
   -webkit-appearance: none;
-  background: transparent;
+  background-color: transparent;
   margin: math.div($thumb-height, 2) 0;
   width: $track-width;
 
@@ -67,22 +67,22 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     outline: 0;
 
     &::-webkit-slider-runnable-track {
-      background: lighten($track-color, $contrast);
+      background-color: lighten($track-color, $contrast);
     }
 
     &::-ms-fill-lower {
-      background: $track-color;
+      background-color: $track-color;
     }
 
     &::-ms-fill-upper {
-      background: lighten($track-color, $contrast);
+      background-color: lighten($track-color, $contrast);
     }
   }
 
   &::-webkit-slider-runnable-track {
     @include track;
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: $track-color;
+    background-color: $track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
   }
@@ -96,7 +96,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   &::-moz-range-track {
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
     @include track;
-    background: $track-color;
+    background-color: $track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
     height: math.div($track-height, 2);
@@ -108,7 +108,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
   &::-ms-track {
     @include track;
-    background: transparent;
+    background-color: transparent;
     border-color: transparent;
     border-width: math.div($thumb-height, 2) 0;
     color: transparent;
@@ -116,14 +116,14 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
   &::-ms-fill-lower {
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: $ie-bottom-track-color;
+    background-color: $ie-bottom-track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: ($track-radius * 2);
   }
 
   &::-ms-fill-upper {
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
-    background: $track-color;
+    background-color: $track-color;
     border: $track-border-width solid $track-border-color;
     border-radius: ($track-radius * 2);
   }
