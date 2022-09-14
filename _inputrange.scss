@@ -21,6 +21,12 @@ $thumb-shadow-color: rgba(0, 0, 0, .2) !default;
 $thumb-border-width: 2px !default;
 $thumb-border-color: #eceff1 !default;
 
+$thumb-background: none !default;
+$thumb-background-size: contain !default;
+$thumb-background-position: center center !default;
+$thumb-background-repeat: no-repeat !default;
+$thumb-background-origin: border-box !default;
+
 $track-width: 100% !default;
 $track-height: 8px !default;
 $track-shadow-size: 1px !default;
@@ -54,7 +60,14 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
 @mixin thumb {
   @include shadow($thumb-shadow-size, $thumb-shadow-blur, $thumb-shadow-color);
+
+  background: $thumb-background;
+  background-size: $thumb-background-size;
+  background-position: $thumb-background-position;
+  background-repeat: $thumb-background-repeat;
+  background-origin: $thumb-background-origin;
   background-color: $thumb-color;
+
   border: $thumb-border-width solid $thumb-border-color;
   border-radius: $thumb-radius;
   box-sizing: border-box;
