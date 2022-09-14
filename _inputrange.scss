@@ -9,6 +9,9 @@
 $track-color: #eceff1 !default;
 $thumb-color: #607d8b !default;
 
+$progress-color: transparent !default; // can be a CSS custom prop: var(--progress-color, transparent)
+$progress-value: 0% !default; // 0-100%. ideally, a dynamic CSS custom prop
+
 $thumb-radius: 12px !default;
 $thumb-height: 24px !default;
 $thumb-width: 24px !default;
@@ -33,6 +36,13 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 
 @mixin shadow($shadow-size, $shadow-blur, $shadow-color) {
   box-shadow: $shadow-size $shadow-size $shadow-blur $shadow-color, 0 0 $shadow-size lighten($shadow-color, 5%);
+}
+
+@mixin progress-bar {
+  background-image: linear-gradient(to right,
+      $progress-color $progress-value,
+      transparent 0%,
+      transparent 100%);
 }
 
 @mixin track {
@@ -83,6 +93,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     @include track;
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
     background-color: $track-color;
+    @include progress-bar;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
   }
@@ -97,6 +108,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
     @include track;
     background-color: $track-color;
+    @include progress-bar;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
     height: math.div($track-height, 2);
@@ -124,6 +136,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   &::-ms-fill-upper {
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
     background-color: $track-color;
+    @include progress-bar;
     border: $track-border-width solid $track-border-color;
     border-radius: ($track-radius * 2);
   }
@@ -134,6 +147,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   }
 
   &:disabled {
+
     &::-webkit-slider-thumb,
     &::-moz-range-thumb,
     &::-ms-thumb,
