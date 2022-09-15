@@ -4,8 +4,6 @@
 // Version 1.5.3
 // MIT License
 
-@use 'sass:math';
-
 $track-color: #eceff1 !default;
 $thumb-color: #607d8b !default;
 
@@ -79,7 +77,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
 [type='range'] {
   -webkit-appearance: none;
   background-color: transparent;
-  margin: math.div($thumb-height, 2) 0;
+  margin: calc(#{$thumb-height} / 2) 0;
   width: $track-width;
 
   &::-moz-focus-outer {
@@ -114,7 +112,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
   &::-webkit-slider-thumb {
     @include thumb;
     -webkit-appearance: none;
-    margin-top: (math.div((-$track-border-width * 2 + $track-height), 2) - math.div($thumb-height, 2));
+    margin-top: calc(((-#{$track-border-width} * 2 + #{$track-height}) / 2) - (#{$thumb-height} / 2));
   }
 
   &::-moz-range-track {
@@ -124,7 +122,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     @include progress-bar;
     border: $track-border-width solid $track-border-color;
     border-radius: $track-radius;
-    height: math.div($track-height, 2);
+    height: calc(#{$track-height} / 2);
   }
 
   &::-moz-range-thumb {
@@ -135,7 +133,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     @include track;
     background-color: transparent;
     border-color: transparent;
-    border-width: math.div($thumb-height, 2) 0;
+    border-width: calc(#{$thumb-height} / 2) 0;
     color: transparent;
   }
 
@@ -143,7 +141,7 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     @include shadow($track-shadow-size, $track-shadow-blur, $track-shadow-color);
     background-color: $ie-bottom-track-color;
     border: $track-border-width solid $track-border-color;
-    border-radius: ($track-radius * 2);
+    border-radius: calc(#{$track-radius} * 2);
   }
 
   &::-ms-fill-upper {
@@ -151,12 +149,12 @@ $ie-bottom-track-color: darken($track-color, $contrast) !default;
     background-color: $track-color;
     @include progress-bar;
     border: $track-border-width solid $track-border-color;
-    border-radius: ($track-radius * 2);
+    border-radius: calc(#{$track-radius} * 2);
   }
 
   &::-ms-thumb {
     @include thumb;
-    margin-top: math.div($track-height, 4);
+    margin-top: calc(#{$track-height} / 4);
   }
 
   &:disabled {
