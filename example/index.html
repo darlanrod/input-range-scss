@@ -12,7 +12,14 @@
   </head>
   <body>
     <div>
-      <input type="range" />
+      <input type="range" max="100" style="--progress: 50%" oninput="updateProgress(this)" />
     </div>
   </body>
+
+  <script>
+    function updateProgress(range) {
+      console.log({range});
+      range.style.setProperty("--progress", `${100 * range.value / range.max}%`);
+    }
+  </script>
 </html>
