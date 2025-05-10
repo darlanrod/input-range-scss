@@ -11,26 +11,33 @@
   outline: 0;
 }
 [type=range]:focus::-webkit-slider-runnable-track {
-  background: #fbfbfc;
+  background: rgb(250.6818181818, 251.3636363636, 251.8181818182);
 }
 [type=range]:focus::-ms-fill-lower {
   background: #eceff1;
 }
 [type=range]:focus::-ms-fill-upper {
-  background: #fbfbfc;
+  background: rgb(250.6818181818, 251.3636363636, 251.8181818182);
+}
+[type=range]:focus-visible {
+  outline: 2px solid rgb(152.6723404255, 174.0212765957, 184.3276595745);
+  outline-offset: 2px;
 }
 [type=range]::-webkit-slider-runnable-track {
   cursor: default;
   height: 8px;
   transition: all 0.2s ease;
   width: 100%;
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(12.75, 12.75, 12.75, 0.2);
   background: #eceff1;
   border: 2px solid #cfd8dc;
   border-radius: 5px;
 }
+[type=range]::-webkit-slider-runnable-track:active {
+  background: rgb(250.6818181818, 251.3636363636, 251.8181818182);
+}
 [type=range]::-webkit-slider-thumb {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(12.75, 12.75, 12.75, 0.2);
   background: #607d8b;
   border: 2px solid #eceff1;
   border-radius: 12px;
@@ -39,10 +46,13 @@
   height: 24px;
   width: 24px;
   -webkit-appearance: none;
-  margin-top: -10px;
+  margin-top: calc((8px - 24px) / 2);
+}
+[type=range]::-webkit-slider-thumb:hover {
+  background: rgb(122.5063829787, 150.1489361702, 163.4936170213);
 }
 [type=range]::-moz-range-track {
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(12.75, 12.75, 12.75, 0.2);
   cursor: default;
   height: 8px;
   transition: all 0.2s ease;
@@ -52,8 +62,11 @@
   border-radius: 5px;
   height: 4px;
 }
+[type=range]::-moz-range-track:active {
+  background: rgb(250.6818181818, 251.3636363636, 251.8181818182);
+}
 [type=range]::-moz-range-thumb {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(12.75, 12.75, 12.75, 0.2);
   background: #607d8b;
   border: 2px solid #eceff1;
   border-radius: 12px;
@@ -61,6 +74,9 @@
   cursor: default;
   height: 24px;
   width: 24px;
+}
+[type=range]::-moz-range-thumb:hover {
+  background: rgb(122.5063829787, 150.1489361702, 163.4936170213);
 }
 [type=range]::-ms-track {
   cursor: default;
@@ -73,19 +89,25 @@
   color: transparent;
 }
 [type=range]::-ms-fill-lower {
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
-  background: #dde3e6;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(12.75, 12.75, 12.75, 0.2);
+  background: rgb(221.3181818182, 226.6363636364, 230.1818181818);
   border: 2px solid #cfd8dc;
   border-radius: 10px;
 }
+[type=range]::-ms-fill-lower:active {
+  background: rgb(250.6818181818, 251.3636363636, 251.8181818182);
+}
 [type=range]::-ms-fill-upper {
-  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(13, 13, 13, 0.2);
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(12.75, 12.75, 12.75, 0.2);
   background: #eceff1;
   border: 2px solid #cfd8dc;
   border-radius: 10px;
 }
+[type=range]::-ms-fill-upper:active {
+  background: rgb(250.6818181818, 251.3636363636, 251.8181818182);
+}
 [type=range]::-ms-thumb {
-  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(13, 13, 13, 0.2);
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2), 0 0 4px rgba(12.75, 12.75, 12.75, 0.2);
   background: #607d8b;
   border: 2px solid #eceff1;
   border-radius: 12px;
@@ -94,6 +116,12 @@
   height: 24px;
   width: 24px;
   margin-top: 2px;
+}
+[type=range]::-ms-thumb:hover {
+  background: rgb(122.5063829787, 150.1489361702, 163.4936170213);
+}
+[type=range]:disabled {
+  opacity: 0.5;
 }
 [type=range]:disabled::-webkit-slider-thumb, [type=range]:disabled::-moz-range-thumb, [type=range]:disabled::-ms-thumb, [type=range]:disabled::-webkit-slider-runnable-track, [type=range]:disabled::-ms-fill-lower, [type=range]:disabled::-ms-fill-upper {
   cursor: not-allowed;

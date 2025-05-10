@@ -1,6 +1,5 @@
-
-# Created by https://www.gitignore.io/api/sass,macos,windows
-# Edit at https://www.gitignore.io/?templates=sass,macos,windows
+# Created by https://www.toptal.com/developers/gitignore/api/sass,macos,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=sass,macos,windows
 
 ### macOS ###
 # General
@@ -29,6 +28,10 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### macOS Patch ###
+# iCloud generated files
+*.icloud
 
 ### Sass ###
 .sass-cache/
@@ -62,4 +65,8 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.gitignore.io/api/sass,macos,windows
+# Custom files to ignore
+*.log
+*.tmp
+
+# End of https://www.toptal.com/developers/gitignore/api/sass,macos,windows

@@ -1,6 +1,6 @@
 {
   "name": "input-range-scss",
-  "version": "1.5.3",
+  "version": "1.6.0",
   "description": "Sass component for customizing the input range using the native properties of each browser.",
   "main": "_inputrange.scss",
   "style": "_inputrange.scss",
@@ -9,7 +9,8 @@
     "example": "example"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"No tests available\"",
+    "build": "sass _inputrange.scss dist/inputrange.css"
   },
   "repository": {
     "type": "git",
@@ -20,8 +21,6 @@
     "scss",
     "input",
     "range",
-    "input",
-    "range",
     "custom",
     "design",
     "visual",
@@ -29,7 +28,7 @@
     "browser",
     "accessibility"
   ],
-  "author": "Darlan Rod (http://rod.marketing)",
+    "author": "Darlan Rod (http://rod.marketing)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/darlanrod/input-range-scss/issues"
