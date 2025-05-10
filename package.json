@@ -1,6 +1,6 @@
 {
   "name": "input-range-scss",
-  "version": "1.6.0",
+  "version": "2.0.1",
   "description": "Sass component for customizing the input range using the native properties of each browser.",
   "main": "_inputrange.scss",
   "style": "_inputrange.scss",
